@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test1
+{
+
+    public class Max
+    {
+        public int MaximumNo()
+        {
+            List<int> list = new List<int>() { 1, 3, 2, 4, 6, 7, 8, 2, 4, 55, 66, 86, 85, 25, 75, 86, 97, 8, 5, 33, 12 };
+
+            int max = 0;
+
+            foreach (int i in list)
+            {
+                if (i > max)
+                {
+                    max = i;
+                }
+            }
+            Console.WriteLine(max);
+            
+            return max;
+        }
+    }
+
+
+    public class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Max M = new Max();
+
+            int maxReturn = M.MaximumNo();
+
+            Console.WriteLine(maxReturn);
+
+            Console.ReadKey();
+        }
+    }
+}
+
