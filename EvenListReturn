@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test1
+{
+    //retun a list of even no
+    public class FindList
+    {
+        public List<int> FindEven()
+        {
+            List<int> Total = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 };
+
+            List<int> Even = new List<int>();
+
+            foreach (int i in Total)
+            {
+                if (i % 2 == 0)
+                {
+                    Even.Add(i);
+                }
+            }
+
+            return Even;
+        }
+    }
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            FindList F = new FindList();
+
+            List<int> EvenPrint = F.FindEven();
+
+            foreach (int i in EvenPrint)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+
